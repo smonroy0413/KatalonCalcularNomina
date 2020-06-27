@@ -5,4 +5,25 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>8982f579-160d-418f-8c60-ab355e31c663</testCaseGuid>
+   <variable>
+      <defaultValue>'sebas'</defaultValue>
+      <description></description>
+      <id>41f49be8-be2d-4d0a-8736-37ab6d5b25ef</id>
+      <masked>false</masked>
+      <name>nombre</name>
+   </variable>
+   <variable>
+      <defaultValue>'12345'</defaultValue>
+      <description></description>
+      <id>f2c776d4-bc57-4879-a4e1-bba5817d8983</id>
+      <masked>false</masked>
+      <name>documento</name>
+   </variable>
+   <variable>
+      <defaultValue>'xxx'</defaultValue>
+      <description></description>
+      <id>6a2793e1-6127-4519-8450-5378975abdb1</id>
+      <masked>false</masked>
+      <name>motivo</name>
+   </variable>
 </TestCaseEntity>

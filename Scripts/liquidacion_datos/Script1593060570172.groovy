@@ -27,8 +27,7 @@ WebUI.click(findTestObject('Object Repository/Page_Calculadora de Liquidacin Lab
 
 WebUI.delay(2)
 
-WebUI.setText(findTestObject('Object Repository/Page_Calculadora de Liquidacin Laboral Gratuita/input_Nombre y Apellidos_terminationemployee_name'), 
-    'pepito perez')
+WebUI.setText(findTestObject('Object Repository/Page_Calculadora de Liquidacin Laboral Gratuita/input_Nombre y Apellidos_terminationemployee_name'), nombre)
 
 WebUI.click(findTestObject('Page_Calculadora de Liquidacin Laboral Gratuita/span_Cdula de ciudadana_select2-selection__arrow'))
 
@@ -36,11 +35,9 @@ WebUI.setText(findTestObject('Page_Calculadora de Liquidacin Laboral Gratuita/in
 
 WebUI.sendKeys(findTestObject('Page_Calculadora de Liquidacin Laboral Gratuita/input__select2-search__field'), Keys.chord(Keys.ENTER))
 
-WebUI.setText(findTestObject('Object Repository/Page_Calculadora de Liquidacin Laboral Gratuita/input_No de documento_terminationemployee_d_0fc08c'), 
-    '1.033.765.312')
+WebUI.setText(findTestObject('Object Repository/Page_Calculadora de Liquidacin Laboral Gratuita/input_No de documento_terminationemployee_d_0fc08c'), documento)
 
-WebUI.setText(findTestObject('Object Repository/Page_Calculadora de Liquidacin Laboral Gratuita/input_Causa de liquidacin_terminationcause'), 
-    'retiro voluntario')
+WebUI.setText(findTestObject('Object Repository/Page_Calculadora de Liquidacin Laboral Gratuita/input_Causa de liquidacin_terminationcause'), motivo)
 
 //WebUI.click(findTestObject('Object Repository/Page_Calculadora de Liquidacin Laboral Gratuita/input_No_terminationcompensation'))
 
@@ -48,7 +45,8 @@ ValorRadio = WebUI.modifyObjectProperty(findTestObject('Object Repository/Page_C
 
 WebUI.click(ValorRadio)
 
-WebUI.takeScreenshot('Test\\screenshot.png')
+//WebUI.takeScreenshot('Test\\screenshot.png')
+WebUI.takeScreenshot()
 
 WebUI.click(findTestObject('Object Repository/Page_Calculadora de Liquidacin Laboral Gratuita/input_Fecha de contratacin_terminationhire_date'))
 
@@ -105,13 +103,17 @@ WebUI.setText(findTestObject('Object Repository/Page_Calculadora de Liquidacin L
 
 WebUI.click(findTestObject('Object Repository/Page_Calculadora de Liquidacin Laboral Gratuita/input_Deducciones pendientes_terminationdeductions'))
 
-WebUI.takeScreenshot('Test\\screenshot1.png')
+//WebUI.takeScreenshot('Test\\screenshot1.png')
+WebUI.takeScreenshot()
 
 WebUI.scrollToElement(findTestObject('Object Repository/Page_Calculadora de Liquidacin Laboral Gratuita/input_Prestamos pendientes_terminationloans'), 3)
 
-WebUI.takeScreenshot('Test\\screenshot2.png')
+//WebUI.takeScreenshot('Test\\screenshot2.png')
+WebUI.takeScreenshot()
 
 def total = WebUI.getText(findTestObject('Object Repository/Page_Calculadora de Liquidacin Laboral Gratuita/span_ 2937805'))
 
 println(total)
+
+WebUI.closeBrowser()
 
