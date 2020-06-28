@@ -26,4 +26,11 @@
       <masked>false</masked>
       <name>motivo</name>
    </variable>
+   <variable>
+      <defaultValue>'1'</defaultValue>
+      <description></description>
+      <id>235915ab-c7e4-46c4-8e84-c96206ee761c</id>
+      <masked>false</masked>
+      <name>itera</name>
+   </variable>
 </TestCaseEntity>
