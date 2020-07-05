@@ -19,8 +19,8 @@
          <combinationType>ONE</combinationType>
          <id>38e14ec4-1ed7-4641-8c2d-d1c5483de10e</id>
          <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
+            <iterationType>RANGE</iterationType>
+            <value>1-3</value>
          </iterationEntity>
          <testDataId>Data Files/Liquidacion_datos_excel</testDataId>
       </testDataLink>
@@ -43,9 +43,9 @@
          <variableId>6a2793e1-6127-4519-8450-5378975abdb1</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>38e14ec4-1ed7-4641-8c2d-d1c5483de10e</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>Itera</value>
          <variableId>235915ab-c7e4-46c4-8e84-c96206ee761c</variableId>
       </variableLink>
    </testCaseLink>

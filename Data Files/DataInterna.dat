@@ -8,8 +8,8 @@
    <dataFileGUID>dfcab614-dd38-445c-88fd-fcb9760f7c5c</dataFileGUID>
    <dataSourceUrl></dataSourceUrl>
    <driver>InternalData</driver>
-   <data>SebasPinzon 79545835 Retiro 1</data>
-   <data>Euden+Monroy 79545830 Voluntario 2</data>
+   <data>SebasPinzon 79545835 Retiro 1 null</data>
+   <data>Euden+Monroy 79545830 Voluntario 2 null</data>
    <internalDataColumns>
       <columnIndex>0</columnIndex>
       <name>NombreN</name>
@@ -28,6 +28,11 @@
    <internalDataColumns>
       <columnIndex>3</columnIndex>
       <name>Itera</name>
+      <size>2</size>
+   </internalDataColumns>
+   <internalDataColumns>
+      <columnIndex>4</columnIndex>
+      <name>ResultadoR</name>
       <size>2</size>
    </internalDataColumns>
    <isInternalPath>false</isInternalPath>

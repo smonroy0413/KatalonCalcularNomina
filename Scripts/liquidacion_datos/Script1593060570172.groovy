@@ -3,8 +3,9 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
-import static org.junit.Assert.*
-
+//import static org.junit.Assert.*
+import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
+import com.sun.xml.internal.org.jvnet.mimepull.DataFile
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -12,22 +13,24 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testcase.TestCaseBinding
 import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testdata.TestDataFactory
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import com.kms.katalon.entity.link.TestCaseTestDataLink
-
 import internal.GlobalVariable as GlobalVariable
-import junit.framework.Test
 import org.openqa.selenium.Keys as Keys
-
 import java.io.File;
 
-String nombreCarpeta = "test"+itera;
 
-println (nombreCarpeta)
+
+String nombreCarpeta = "test"+itera;
+int iteraNum = itera as Integer
+int num = iteraNum + 1;
+String campo = "E"+num;
+
 
 File directorio = new File("Test\\"+nombreCarpeta);
 if (!directorio.exists()){
@@ -137,7 +140,15 @@ WebUI.takeScreenshot('Test\\'+nombreCarpeta+'\\screenshot2.png')
 def total = WebUI.getText(findTestObject('Object Repository/Page_Calculadora de Liquidacin Laboral Gratuita/span_ 2937805'))
 
 println(total)
-
+//
+String archivoExcel = 'C:\\Users\\monro\\Documents\\dataliquidacion.xlsx'
+File file1 = new File(archivoExcel)
+assert file1.exists() == true
+workbook01 = ExcelKeywords.getWorkbook(archivoExcel)
+sheet01 = ExcelKeywords.getExcelSheet(workbook01, 'Hoja1')
+ExcelKeywords.setValueToCellByAddress(sheet01, campo, total)
+ExcelKeywords.saveWorkbook(archivoExcel, workbook01)
+//
 WebUI.closeBrowser()
 
 
